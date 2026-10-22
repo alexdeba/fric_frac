@@ -55,35 +55,6 @@ Selon le système :
 - `A` : accélérer l'ordinateur. Entrée ou Échap : passer (ne rien forcer,
   rester ici, pas de combat).
 
-## Organisation
-
-- `jeu/` : le moteur de règles, sans affichage. `plateau.go` (cases,
-  régions, obstacles, distances), `etat.go` (voleurs, gardes, meubles et
-  leur placement), `tour.go` (entrée, effraction, butin, bruit, marche,
-  sortie), `deplacement.go` (trajets des voleurs, chemins des gardes),
-  `gardes.go` (ronde, alerte, poursuite, arrestation), `combat.go`,
-  `tables.go` (les trois tableaux de la règle, l'équipement), `ia.go`,
-  `controleur.go` (l'interface entre moteur et joueurs).
-  `plateau_donnees.go` : le plateau (cases, murs, portes, fenêtres,
-  pièces), relevé sur une photo de l'encart par un outil qui n'est pas
-  distribué.
-- Racine : l'interface Ebitengine. `partie.go` (moteur dans une goroutine,
-  le joueur humain répond par un canal), `vue.go` (plateau, caméra,
-  surlignages, pions, ondes de bruit), `minicarte.go`, `panneau.go`
-  (consigne, actions, cambrioleurs, faits divers, équipement, fin),
-  `accueil.go`, `regles.go`, `infocase.go`, `dessin.go`, `boutons.go`,
-  `ressources.go`, `capture.go`.
-
-## Style
-
-Neuilly, années 20, Arsène Lupin : nuit bleu ardoise, or des lampes et des
-ferronneries Art déco, bordeaux des tapis, papier crème des cartes de
-visite (la consigne, la règle, l'équipement, le receleur). Titres en
-Limelight, texte en Playfair Display, boutons en Josefin Sans, « faits
-divers » tapés à la machine en Special Elite (licences dans
-`assets/polices`). Le texte des boutons ne descend jamais sous 16 px
-(`TestTailleBoutons`).
-
 ## Choix d'adaptation
 
 Les points ambigus ou illisibles de la règle, et ce qui a été décidé :
